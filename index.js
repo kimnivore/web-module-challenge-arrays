@@ -44,8 +44,9 @@ Use the copy function below to do the following:
   1. receive an array as a parameter - you will pass in originalFlavors as an argument when the function is invoked.
   2. Return a copy of the received array  
 */
-
+//take 1 parameter, you can call it anything but its holding the place of an array you are passing in as an argument
 function copy(/*your code here*/){
+  // take a spread of the parameter
   /*your code here*/
 }    
 
@@ -63,9 +64,12 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
+//taking 1 parameter - it's holding the place for an array
+//return boolean
 
 function is31Flavors(/*your code here*/){
  /*your code here*/
+ //need conditional inside of here, if true, return true, else return false --- should be exactly 31 items in array
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -80,9 +84,11 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
+// 2 param array, string which is holding place of new flavor receive an array
 function addFlavor(/*your code here*/){
  /*your code here*/
+ //use .unshift() to add the new flavor to the beginning of the received array
+ //return the array
 }
 
 
@@ -96,9 +102,11 @@ Use the removeLastFlavor function below to do the following:
 
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-
+//receive 1 parameter which will be a place holder for the array
 function removeLastFlavor(/*your code here*/){
  /*your code here*/
+ // remove last item using .pop()
+ //return the array
 }
 
 
@@ -113,9 +121,10 @@ Use the getFlavorByIndex function below to do the following:
 
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
-
+// 2 parajmeters array / number (holding the place for an index)
 function getFlavorByIndex(/*your code here*/){
   /*your code here*/
+  //return array at the index ~ array[]
 }
 
 
@@ -133,9 +142,11 @@ Use the removeFlavorByName function below to do the following:
 
   HINT: You can use .splice() for this
 */
-
+//2 parameters: array and the string we want to remove exact match
 function removeFlavorByName(/*your code here*/){
   /*your code here*/
+  //loop through the array and check every index for the exact match of the string. if it exists then remove it using .splice(), which takes 2 arguments(start, how many to delete)
+  //outside of the loop, return the array
 }
 
 
@@ -146,6 +157,7 @@ Your task is to write a function that checks every item in the array for a strin
 that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around 
 by passing in those specific strings.
 
+//2 params - array & string. looking for every instance use .includes()
 Use the filterByWord function below to do the following:
   1. Receive an array
   2. Receive a string (example: "chocolate")
@@ -160,13 +172,28 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, string){
+ /*your code here*/
+  // create a new array to push our results to
+   const filtered = [];
+  // loop through the provided array and check every index
+  for(let i = 0; i < array.length; i++){
+
+  
+  //if index includes the string, push to newarray
+  if(array[i].includes(string)){
+    //push to new array
+    filtered.push(array[i]);
+  }
+}
+  //outside of the loop, return the new array.
+  return filtered;
 }
 
+console.log('Task 7', filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
-
+//uncomment array data and move about stretch function
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
 
 Use the getAverageWordLength function below to do the following:
