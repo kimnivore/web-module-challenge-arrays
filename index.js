@@ -47,11 +47,7 @@ Use the copy function below to do the following:
 //take 1 parameter, you can call it anything but its holding the place of an array you are passing in as an argument
 
 function copy(array){
-  for(let i = 0; i < array.length; i++){
-    let copy = [...array];{
-    return copy;
-    }
-  }
+    return [...array];
 }
 console.log('Task 1', copy(originalFlavors));  
 
@@ -70,11 +66,11 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 //return boolean
 
 function is31Flavors(array){
-  for(let i = 0; i < array.length; i++){
-    if(array.length === 31);{
-    return true;
+    if(array.length === 31){
+    return true
+    }else{
+      return false
     }
-  }
   }
   console.log('Task 2', is31Flavors(originalFlavors));
 
@@ -95,12 +91,10 @@ Use the addFlavor function below to do the following:
 
 // 2 param array, string which is holding place of new flavor receive an array
 function addFlavor(array, string){
-  for(let i = 0; i < array.length; i++){
-   array.unshift(string);{
+   array.unshift(string)
    return array;
 }
-}
-}
+
 console.log('Task3', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
@@ -120,11 +114,8 @@ Use the removeLastFlavor function below to do the following:
 */
 //receive 1 parameter which will be a place holder for the array
 function removeLastFlavor(array){
-  for(let i = 0; i < array.length; i++){
-  array.pop();{
+  array.pop();
   return array;
-}
-}
 }
 console.log('Task 4', removeLastFlavor(originalFlavors));
  // remove last item using .pop()
@@ -143,10 +134,8 @@ Use the getFlavorByIndex function below to do the following:
 // 2 parajmeters array / number (holding the place for an index)
 
 function getFlavorByIndex(array, num){
-  for(let i = 0; i < array.length; i++){
     return array[num];
   }
-}
 console.log('Task 5', getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -175,9 +164,9 @@ function removeFlavorByName(array, string){
 }
 return array;
 } 
-
-
 console.log('Task 6', removeFlavorByName(originalFlavors, 'Rocky Road'));
+
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
@@ -206,7 +195,6 @@ function filterByWord(array, string){
   // loop through the provided array and check every index
   for(let i = 0; i < array.length; i++){
 
-  
   //if index includes the string, push to newarray
   if(array[i].includes(string)){
     //push to new array
@@ -221,6 +209,88 @@ console.log('Task 7', filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 //uncomment array data and move about stretch function
+
+// // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
+// const newFlavors = [
+//   "Date night",
+//   "U.S.S Butterscotch (Stranger Things special)",
+//   "Honey Almond",
+//   "Mint Chocolate Chip",
+//   "Chocolate",
+//   "Oreo® Cookies'n Cream",
+//   "Chocolate Chip",
+//   "Pralines 'n Cream",
+//   "Very Berry Strawberry",
+//   "Chocolate Chip Cookie Dough",
+//   "Old Fashioned Butter Pecan",
+//   "Jamoca®",
+//   "Jamoca® Almond Fudge",
+//   "Reese's® Peanut Butter Cup",
+//   "Rocky Road",
+//   "Peanut Butter ’n Chocolate",
+//   "Gold Medal Ribbon®",
+//   "World Class® Chocolate",
+//   "Cherries Jubilee",
+//   "Chocolate Fudge",
+//   "Daiquiri Ice",
+//   "Rainbow Sherbet",
+//   "Rainbow Swirl"
+// ] 
+
+// const seasonalFlavors = [
+//   "America's Birthday Cake",
+//   "Baseball Nut®",
+//   "Blueberry Cheesecake",
+//   "Bourbon Street Pecan Pie",
+//   "Brownie Bar Mashup",
+//   "Cherry Cordial with Kisses",
+//   "Chocolate Mousse Royale",
+//   "French Vanilla",
+//   "Eggnog",
+//   "German Chocolate Cake",
+//   "Icing on the Cake",
+//   "Love Potion #31",
+//   "New York Cheesecake",
+//   "Nutty Coconut",
+//   "Peppermint",
+//   "Strawberry Cheesecake",
+//   "Rock ’n Pop Swirl",
+//   "Reese’s Peanut Butter Cup",
+//   "Trick Oreo Treat",
+//   "Winter White Chocolate",
+//   "made with Snickers®",
+//   "made with M&M's®",
+//   "Heath®",
+//   "Mango Tango"
+// ]
+
+// const regionalFlavors = [
+//   "Pink Bubblegum",
+//   "Caramel Macchiato",
+//   "York Peppermint Pattie",
+//   "Cotton Candy",
+//   "Orange Sherbet",
+//   "Grape Ice",
+//   "Watermelon Ice",
+//   "Miami Vice Sorbet",
+//   "Splish Splash®",
+//   "Wild 'n Reckless Sherbet",
+//   "Lemon Custard",
+//   "Oregon Blackberry",
+//   "Bananas ‘n Strawberries",
+//   "Mississippi Mud",
+//   "Rum Raisin",
+//   "Creole Cream Cheese",
+//   "Chocolate Almond",
+//   "Fudge Brownie",
+//   "Banana Nut",
+//   "Black Walnut",
+//   "Cotton Candy Crackle",
+//   "Quarterback Crunch",
+//   "Chocolate Chocolate Chip Cheesecake",
+//   "Caramel 'n' Cookies"
+// ]
+
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
 
 Use the getAverageWordLength function below to do the following:
@@ -231,10 +301,12 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
-}
+function getAverageWordLength(array){}
+//   for(let i = 0; i < array.length; i++){
+//     array.split
+// }
 
+// console.log(getAverageWordLength(originalFlavors));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
@@ -248,10 +320,12 @@ Use the getRandomFlavors function and new arrays below to do the following:
   For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
 
+function getRandomFlavors(){
 
-function getRandomFlavors(/*code here*/){
-  /*code here*/
+  
 }
+  /*code here*/
+
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 // const newFlavors = [
