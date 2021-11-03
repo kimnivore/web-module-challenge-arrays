@@ -47,10 +47,12 @@ Use the copy function below to do the following:
 //take 1 parameter, you can call it anything but its holding the place of an array you are passing in as an argument
 
 function copy(array){
+  for(let i = 0; i < array.length; i++){
     let copy = [...array];{
     return copy;
     }
   }
+}
 console.log('Task 1', copy(originalFlavors));  
 
 
@@ -93,8 +95,10 @@ Use the addFlavor function below to do the following:
 
 // 2 param array, string which is holding place of new flavor receive an array
 function addFlavor(array, string){
+  for(let i = 0; i < array.length; i++){
    array.unshift(string);{
    return array;
+}
 }
 }
 console.log('Task3', addFlavor(originalFlavors, 'Rainbow Sherbert'));
@@ -116,8 +120,10 @@ Use the removeLastFlavor function below to do the following:
 */
 //receive 1 parameter which will be a place holder for the array
 function removeLastFlavor(array){
-array.pop();{
-return array;
+  for(let i = 0; i < array.length; i++){
+  array.pop();{
+  return array;
+}
 }
 }
 console.log('Task 4', removeLastFlavor(originalFlavors));
@@ -135,11 +141,13 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 // 2 parajmeters array / number (holding the place for an index)
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
-  //return array at the index ~ array[]
-}
 
+function getFlavorByIndex(array, num){
+  for(let i = 0; i < array.length; i++){
+    return array[num];
+  }
+}
+console.log('Task 5', getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -156,14 +164,20 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 //2 parameters: array and the string we want to remove exact match
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
-  //loop through the array and check every index for the exact match of the string. if it exists then remove it using .splice(), which takes 2 arguments(start, how many to delete)
+ //loop through the array and check every index for the exact match of the string. if it exists then remove it using .splice(), which takes 2 arguments(start, how many to delete)
   //outside of the loop, return the array
+
+function removeFlavorByName(array, string){
+  for(let i = 0; i < array.length; i++){
+  if(array[i] === string){
+    array.splice(i, 1);
+  }
 }
+return array;
+} 
 
 
-
+console.log('Task 6', removeFlavorByName(originalFlavors, 'Rocky Road'));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
