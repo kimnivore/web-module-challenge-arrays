@@ -66,10 +66,17 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 //taking 1 parameter - it's holding the place for an array
 //return boolean
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
- //need conditional inside of here, if true, return true, else return false --- should be exactly 31 items in array
+function is31Flavors(array){
+for(let i = 0; i < originalFlavors.length; i++){
+  if(originalFlavors.length === 31);{
+  return true;
+  }
 }
+}
+console.log('Task 2', is31Flavors());
+
+ //need conditional inside of here, if true, return true, else return false --- should be exactly 31 items in array
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
