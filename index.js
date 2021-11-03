@@ -47,10 +47,11 @@ Use the copy function below to do the following:
 //take 1 parameter, you can call it anything but its holding the place of an array you are passing in as an argument
 
 function copy(array){
-    let copy = [...originalFlavors];
+    let copy = [...array];{
     return copy;
+    }
   }
-console.log('Task 1', copy());  
+console.log('Task 1', copy(originalFlavors));  
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -67,13 +68,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 //return boolean
 
 function is31Flavors(array){
-for(let i = 0; i < originalFlavors.length; i++){
-  if(originalFlavors.length === 31);{
-  return true;
+  for(let i = 0; i < array.length; i++){
+    if(array.length === 31);{
+    return true;
+    }
   }
-}
-}
-console.log('Task 2', is31Flavors());
+  }
+  console.log('Task 2', is31Flavors(originalFlavors));
 
  //need conditional inside of here, if true, return true, else return false --- should be exactly 31 items in array
 
@@ -91,12 +92,17 @@ Use the addFlavor function below to do the following:
 */
 
 // 2 param array, string which is holding place of new flavor receive an array
-function addFlavor(/*your code here*/){
- /*your code here*/
- //use .unshift() to add the new flavor to the beginning of the received array
- //return the array
+function addFlavor(array, string){
+   array.unshift(string);{
+   return array;
 }
+}
+console.log('Task3', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
+
+//  //use .unshift() to add the new flavor to the beginning of the received array
+//  //return the array
+// }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -109,13 +115,14 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 //receive 1 parameter which will be a place holder for the array
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+array.pop();{
+return array;
+}
+}
+console.log('Task 4', removeLastFlavor(originalFlavors));
  // remove last item using .pop()
  //return the array
-}
-
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
